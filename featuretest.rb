@@ -6,8 +6,8 @@ airport = Airport.new
 
 # p plane.land(airport)
 
-#plane takes off
+# plane takes off
 p plane.takeoff
 
-#expecting false (plane no longer docked at airport)
+# expecting false (plane no longer docked at airport)
 p airport.planes_docked.include?(plane)
