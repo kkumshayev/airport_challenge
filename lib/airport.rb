@@ -4,9 +4,9 @@ class Airport
   attr_accessor :weather
   attr_reader :capacity
 
-  def initialize
+  def initialize(capacity = 20)
     @weather = nil
-    @capacity = 20
+    @capacity = capacity
     @planes_docked = []
   end
 
