@@ -12,7 +12,7 @@ class Airport
 
   def request_landing(plane)
     raise 'Planes cannot land during a storm.' if @weather == :stormy
-    raise 'Cannot land. The airport is full.' if @planes_docked.count >= @capacity
+    raise 'Cannot land. The airport is full.' if full?
     @planes_docked << plane
     self
   end
@@ -23,4 +23,9 @@ class Airport
     self
   end
 
+  private
+
+  def full?
+    @planes_docked.count >= @capacity
+  end
 end

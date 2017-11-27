@@ -2,7 +2,8 @@ require './lib/airport'
 require './lib/plane'
 
 plane = Plane.new
-airport = Airport.new
+# airport = Airport.new
+airport = Airport.new(30)
 
 # p plane.land(airport)
 
@@ -21,9 +22,12 @@ airport = Airport.new
 # # takeoff should now raise an error
 # p plane.takeoff
 
-p airport.capacity
-airport.capacity.times do
-  plane.land(airport)
-end
-# should now raise error about capacity
-p plane.land(airport)
+# p airport.capacity
+# airport.capacity.times do
+#   plane.land(airport)
+# end
+# # should now raise error about capacity
+# p plane.land(airport)
+
+# should return true
+p airport.capacity == 30
