@@ -37,7 +37,13 @@ describe Plane do
       expect { plane.land(airport) }.to raise_error 'Planes cannot land during a storm.'
     end
 
-  
+    it 'cannot land when the airport is full' do
+      plane = Plane.new
+      airport = Airport.new
+      airport.capacity.times {Plane.new.land(airport)}
+      expect { plane.land(airport) }.to raise_error 'Cannot land. The airport is full.'
+    end
+
 
   end
 

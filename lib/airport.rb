@@ -5,17 +5,21 @@ class Airport
   attr_reader :capacity
 
   def initialize
-    @weather
+    @weather = nil
     @capacity = 20
+    @planes_docked = []
   end
 
   def request_landing(plane)
     raise 'Planes cannot land during a storm.' if @weather == :stormy
+
     self
   end
 
   def request_takeoff(plane)
     raise 'Planes cannot take off during a storm.' if @weather == :stormy
+
     self
   end
+
 end
