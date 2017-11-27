@@ -2,9 +2,11 @@ require_relative 'plane'
 
 class Airport
   attr_accessor :weather
+  attr_reader :capacity
 
   def initialize
     @weather
+    @capacity = 20
   end
 
   def request_landing(plane)

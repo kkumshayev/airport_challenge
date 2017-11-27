@@ -36,6 +36,9 @@ describe Plane do
       airport.weather = :stormy
       expect { plane.land(airport) }.to raise_error 'Planes cannot land during a storm.'
     end
+
+  
+
   end
 
 end
