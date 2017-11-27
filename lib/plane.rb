@@ -8,11 +8,12 @@ class Plane
   end
 
   def land(airport)
-    @location = airport
+    @location = airport.request_landing(self)
     self
   end
 
   def takeoff
+    @location.request_takeoff(self)
     @location = :'In Flight'
     self
   end
