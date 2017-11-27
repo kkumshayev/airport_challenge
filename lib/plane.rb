@@ -13,7 +13,7 @@ class Plane
   end
 
   def takeoff
-    @location.request_takeoff(self)
+    @location.request_takeoff
     @location = :'In Flight'
     self
   end

@@ -1,7 +1,7 @@
 require 'plane'
 
 describe Plane do
-  let(:airport) { double(:airport) }
+  # let(:airport) { double(:airport) }
 
   it { is_expected.to respond_to(:land).with(1).argument }
   it { is_expected.to respond_to(:takeoff) }
@@ -43,7 +43,6 @@ describe Plane do
       airport.capacity.times {Plane.new.land(airport)}
       expect { plane.land(airport) }.to raise_error 'Cannot land. The airport is full.'
     end
-
 
   end
 

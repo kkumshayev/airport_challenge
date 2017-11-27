@@ -17,7 +17,7 @@ class Airport
     self
   end
 
-  def request_takeoff(plane)
+  def request_takeoff
     raise 'Planes cannot take off during a storm.' if @weather == :stormy
     @planes_docked.pop
     self
